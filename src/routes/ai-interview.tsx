@@ -31,6 +31,7 @@ const ROUNDS = [
 
 function AiInterviewPage() {
   const [selected, setSelected] = useState(0);
+  const round = ROUNDS[selected] ?? ROUNDS[0]!;
 
   return (
     <PageShell>
@@ -70,13 +71,13 @@ function AiInterviewPage() {
               </div>
               <div className="min-w-0">
                 <p className="truncate font-display font-bold">Prepify Interviewer</p>
-                <p className="label-mono">{ROUNDS[selected].name}</p>
+                <p className="label-mono">{round.name}</p>
               </div>
             </div>
 
             <div className="mt-6 space-y-4 text-sm">
               <div className="rounded-lg bg-surface p-4 leading-relaxed">
-                Walk me through how you would approach {ROUNDS[selected].name.toLowerCase()} today.
+                Walk me through how you would approach {round.name.toLowerCase()} today.
                 Take your time — think out loud.
               </div>
               <div className="ml-auto max-w-[85%] rounded-lg border border-border p-4 leading-relaxed text-muted-foreground">
@@ -85,7 +86,7 @@ function AiInterviewPage() {
             </div>
 
             <button className="mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-primary text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
-              <Mic className="h-4 w-4" /> Start {ROUNDS[selected].mins}-minute round
+              <Mic className="h-4 w-4" /> Start {round.mins}-minute round
               <ArrowRight className="h-4 w-4" />
             </button>
 
