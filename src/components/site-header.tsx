@@ -21,7 +21,7 @@ export function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-12">
+        <div className="mx-auto grid max-w-[1500px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-6 lg:px-8 xl:px-12">
           <Link to="/" className="flex min-w-0 items-center gap-2">
             <span className="font-mono text-lg text-gold">&gt;_</span>
             <span className="truncate font-display text-xl font-bold tracking-tight">Prepify</span>
