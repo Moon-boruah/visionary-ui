@@ -87,7 +87,7 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         {/* left rail */}
-        <div className="pointer-events-none absolute left-6 top-0 hidden h-full flex-col items-center xl:flex">
+        <div className="pointer-events-none absolute left-4 top-0 hidden h-full flex-col items-center 2xl:flex">
           <span className="h-40 w-px bg-border" />
           <Mouse className="my-4 h-5 w-5 text-muted-foreground" />
           <span className="label-mono [writing-mode:vertical-rl]">Scroll to explore</span>
@@ -104,7 +104,7 @@ function Index() {
         </div>
 
         {/* right rail */}
-        <div className="pointer-events-none absolute right-6 top-8 hidden text-right xl:block">
+        <div className="pointer-events-none absolute right-4 top-8 hidden text-right 2xl:block">
           <p className="label-mono leading-6">
             Same
             <br />
@@ -117,7 +117,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-8 pt-12 lg:grid-cols-[1.05fr_1fr] lg:px-12 lg:pt-16">
+        <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-8 pt-12 lg:grid-cols-[1.05fr_1fr] lg:px-12 lg:pt-16 2xl:px-24">
           <div className="hero-fade min-w-0">
             <p className="label-mono">// practice. improve. get placed.</p>
             <h1 className="mt-6 font-display text-[3.25rem] font-extrabold leading-[0.92] tracking-tight sm:text-7xl lg:text-[5.5rem]">
@@ -181,7 +181,7 @@ function Index() {
       </section>
 
       {/* FEATURE CARDS */}
-      <section className="px-5 pt-6 lg:px-12">
+      <section className="px-5 pt-6 lg:px-12 2xl:px-24">
         <div className="mx-auto grid max-w-[1400px] gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {FEATURES.map((f, i) => (
             <Link
@@ -203,7 +203,7 @@ function Index() {
       </section>
 
       {/* STATS */}
-      <section className="px-5 pt-4 lg:px-12">
+      <section className="px-5 pt-4 lg:px-12 2xl:px-24">
         <div className="mx-auto max-w-[1400px] rounded-lg bg-surface px-6 py-6">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-border">
             {STATS.map((s) => (
@@ -220,8 +220,8 @@ function Index() {
       </section>
 
       {/* WHY PREPIFY */}
-      <section id="why" className="relative px-5 py-20 lg:px-12">
-        <p className="label-mono absolute left-6 top-24 hidden max-w-[9rem] leading-6 xl:block">
+      <section id="why" className="relative px-5 py-20 lg:px-12 2xl:px-24">
+        <p className="label-mono absolute left-4 top-24 hidden max-w-[9rem] leading-6 2xl:block">
           "A
           <br />
           Developer

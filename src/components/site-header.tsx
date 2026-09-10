@@ -27,7 +27,7 @@ export function SiteHeader() {
             <span className="truncate font-display text-xl font-bold tracking-tight">Prepify</span>
           </Link>
 
-          <nav className="hidden items-center gap-8 justify-self-center lg:flex">
+          <nav className="hidden items-center gap-6 justify-self-center lg:flex xl:gap-8">
             {NAV.map((item) => (
               <Link
                 key={item.to}
