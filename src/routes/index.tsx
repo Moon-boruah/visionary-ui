@@ -85,7 +85,18 @@ function Index() {
   return (
     <PageShell>
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative isolate flex min-h-[calc(100vh-4.5rem)] items-center overflow-hidden">
+        {/* full-bleed background */}
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 bg-cover bg-center"
+          style={{ backgroundImage: `url(${theme === "dark" ? heroDark.url : heroLight.url})` }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/20 dark:from-background dark:via-background/80 dark:to-background/10"
+        />
+
         {/* left rail */}
         <div className="pointer-events-none absolute left-4 top-0 hidden h-full flex-col items-center 2xl:flex">
           <span className="h-40 w-px bg-border" />
@@ -117,8 +128,8 @@ function Index() {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-8 pt-12 lg:grid-cols-[1.05fr_1fr] lg:px-12 lg:pt-16 2xl:px-24">
-          <div className="hero-fade min-w-0">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-16 lg:px-12 2xl:px-24">
+          <div className="hero-fade min-w-0 max-w-2xl">
             <p className="label-mono">// practice. improve. get placed.</p>
             <h1 className="mt-6 font-display text-[3.25rem] font-extrabold leading-[0.92] tracking-tight sm:text-7xl lg:text-[5.5rem]">
               Code
@@ -145,36 +156,6 @@ function Index() {
               >
                 Explore Features
               </a>
-            </div>
-          </div>
-
-          <div className="relative min-w-0">
-            <img
-              src={theme === "dark" ? heroDark : heroLight}
-              alt="A focused developer workspace with a laptop, desk lamp, headphones and a study timer"
-              width={1600}
-              height={1104}
-              className="w-full rounded-xl object-cover"
-            />
-            <div className="absolute left-4 top-6 w-[62%] max-w-sm overflow-hidden rounded-lg border border-border/60 bg-popover/90 shadow-lift backdrop-blur-md sm:left-8 sm:top-10">
-              <div className="flex items-center gap-2 border-b border-border/60 px-3 py-2">
-                <span className="h-2 w-2 rounded-full bg-muted-foreground/50" />
-                <span className="h-2 w-2 rounded-full bg-muted-foreground/50" />
-                <span className="h-2 w-2 rounded-full bg-muted-foreground/50" />
-                <span className="label-mono ml-2">main.py</span>
-              </div>
-              <pre className="overflow-x-auto px-3 py-3 font-mono text-[11px] leading-5 sm:text-xs">
-                {CODE_LINES.map((line, i) => (
-                  <div key={i} className="flex gap-3">
-                    <span className="w-3 shrink-0 text-muted-foreground/60">{i + 1}</span>
-                    <span className={i === 6 ? "text-gold" : ""}>{line}</span>
-                  </div>
-                ))}
-                <div className="flex gap-3">
-                  <span className="w-3 shrink-0 text-muted-foreground/60">8</span>
-                  <span className="caret">|</span>
-                </div>
-              </pre>
             </div>
           </div>
         </div>
