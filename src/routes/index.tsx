@@ -12,9 +12,8 @@ import {
   Braces,
 } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
-import { useTheme } from "@/components/theme-provider";
-import heroLight from "@/assets/hero-light.jpg.asset.json";
-import heroDark from "@/assets/hero-dark.jpg.asset.json";
+import { ThemeBackdrop } from "@/components/theme-backdrop";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
