@@ -63,12 +63,19 @@ export function SiteHeader() {
                 <Moon className="h-[18px] w-[18px]" />
               )}
             </button>
-            <button className="hidden h-9 shrink-0 rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-gold hover:text-gold sm:block">
+            <Link
+              to="/login"
+              className="hidden h-9 shrink-0 items-center rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-gold hover:text-gold sm:inline-flex"
+            >
               Log In
-            </button>
-            <button className="hidden h-9 shrink-0 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-85 sm:block">
+            </Link>
+            <Link
+              to="/signup"
+              className="hidden h-9 shrink-0 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-85 sm:inline-flex"
+            >
               Sign Up
-            </button>
+            </Link>
+
             <button
               type="button"
               aria-label="Menu"
