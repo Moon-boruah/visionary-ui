@@ -15,7 +15,7 @@ export function ThemeBackdrop() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/20 dark:from-background dark:via-background/80 dark:to-background/10"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-background/70 via-background/25 to-transparent dark:from-background/70 dark:via-background/25 dark:to-transparent"
       />
     </>
   );
