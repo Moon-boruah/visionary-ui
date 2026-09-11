@@ -63,12 +63,19 @@ export function SiteHeader() {
                 <Moon className="h-[18px] w-[18px]" />
               )}
             </button>
-            <button className="hidden h-9 shrink-0 rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-gold hover:text-gold sm:block">
+            <Link
+              to="/login"
+              className="hidden h-9 shrink-0 items-center rounded-md border border-border px-5 text-sm font-medium transition-colors hover:border-gold hover:text-gold sm:inline-flex"
+            >
               Log In
-            </button>
-            <button className="hidden h-9 shrink-0 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-85 sm:block">
+            </Link>
+            <Link
+              to="/signup"
+              className="hidden h-9 shrink-0 items-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-85 sm:inline-flex"
+            >
               Sign Up
-            </button>
+            </Link>
+
             <button
               type="button"
               aria-label="Menu"
@@ -97,13 +104,22 @@ export function SiteHeader() {
               ))}
             </nav>
             <div className="mt-4 flex gap-3">
-              <button className="h-9 flex-1 rounded-md border border-border text-sm font-medium">
+              <Link
+                to="/login"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-9 flex-1 items-center justify-center rounded-md border border-border text-sm font-medium"
+              >
                 Log In
-              </button>
-              <button className="h-9 flex-1 rounded-md bg-primary text-sm font-medium text-primary-foreground">
+              </Link>
+              <Link
+                to="/signup"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-9 flex-1 items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground"
+              >
                 Sign Up
-              </button>
+              </Link>
             </div>
+
           </div>
         )}
       </header>
