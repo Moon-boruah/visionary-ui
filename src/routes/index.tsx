@@ -87,15 +87,8 @@ function Index() {
       {/* HERO */}
       <section className="relative isolate flex min-h-[calc(100vh-4.5rem)] items-center overflow-hidden">
         {/* full-bleed background */}
-        <div
-          aria-hidden
-          className="absolute inset-0 -z-10 bg-cover bg-center"
-          style={{ backgroundImage: `url(${theme === "dark" ? heroDark.url : heroLight.url})` }}
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/20 dark:from-background dark:via-background/80 dark:to-background/10"
-        />
+        <ThemeBackdrop />
+
 
         {/* left rail */}
         <div className="pointer-events-none absolute left-4 top-0 hidden h-full flex-col items-center 2xl:flex">

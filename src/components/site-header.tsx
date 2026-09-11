@@ -104,13 +104,22 @@ export function SiteHeader() {
               ))}
             </nav>
             <div className="mt-4 flex gap-3">
-              <button className="h-9 flex-1 rounded-md border border-border text-sm font-medium">
+              <Link
+                to="/login"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-9 flex-1 items-center justify-center rounded-md border border-border text-sm font-medium"
+              >
                 Log In
-              </button>
-              <button className="h-9 flex-1 rounded-md bg-primary text-sm font-medium text-primary-foreground">
+              </Link>
+              <Link
+                to="/signup"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex h-9 flex-1 items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground"
+              >
                 Sign Up
-              </button>
+              </Link>
             </div>
+
           </div>
         )}
       </header>
