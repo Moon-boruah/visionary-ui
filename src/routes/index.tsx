@@ -79,7 +79,7 @@ const CODE_LINES = [
 ];
 
 function Index() {
-  const { theme } = useTheme();
+
 
   return (
     <PageShell>
